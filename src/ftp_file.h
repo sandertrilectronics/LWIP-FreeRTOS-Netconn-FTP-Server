@@ -5,11 +5,15 @@
  *      Author: Sander
  */
 
-#ifndef ETH_FTP_FTPS_FILE_H_
-#define ETH_FTP_FTPS_FILE_H_
+#ifndef ETH_FTP_FTP_FILE_H_
+#define ETH_FTP_FTP_FILE_H_
 
 #include <stdint.h>
 #include "fatfs.h"
+
+/**
+ * wrapper functions for file access from FTP server.
+ */
 
 extern FRESULT ftps_f_stat(const char* path, FILINFO* nfo);
 
@@ -37,4 +41,4 @@ extern FRESULT ftps_f_utime(const TCHAR* path, const FILINFO* fno);
 
 extern FRESULT ftps_f_getfree(const TCHAR* path, DWORD* nclst, FATFS** fatfs);
 
-#endif /* ETH_FTP_FTPS_FILE_H_ */
+#endif /* ETH_FTP_FTP_FILE_H_ */
